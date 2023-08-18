@@ -1,0 +1,282 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+  --siderbar-width: 250px;
+}
+
+/*** HEADER ***/
+.home-header{
+  background-image: linear-gradient(#383838c7, #383838b0), url(images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.header{
+  display: inline;
+}
+
+nav{
+  flex-direction: column;
+}
+
+.navbar-bg{
+  background-color: #383838; 
+  box-shadow: 0px 0px 10px 2px rgb(133, 133, 133);
+}
+
+.sticky{
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.greeting{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.greeting h1 {
+  color: #F2F2F2;
+  font-size: 3em;
+  font-weight: 900;
+}
+
+.greeting p {
+  color: #CDBE78;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.btn-hero{
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+  color: #F2F2F2;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-size: 1.3em;
+}
+
+.btn-hero:hover{
+  background-color: #066163;
+  border: 1px solid #066163;
+}
+
+@media (max-width: 500px) {
+  .greeting{
+    padding: 10px;
+  }
+  .greeting h1{ 
+    font-size: 2.5em;
+  }
+  .greeting p{
+    font-size: 1em;
+  }
+  .btn-hero{
+    font-size: 1em;
+  }
+}
+
+/*** ABOUT ***/
+.card-container{
+  margin: 10px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin: 10px 5%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px gray;
+  transition: 0.3s;
+}
+
+.card:hover{
+  box-shadow: 0px 0px 10px 5px rgb(194, 192, 192);
+}
+
+.card img{
+  border-radius: 10px;
+  width: 15em;
+  height: 350px;
+  object-fit: cover;
+}
+
+/*** PROFILE ***/
+
+.profile{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: row;
+}
+
+.profile img{
+  width: 50%;
+  padding: 2% 10%;
+  object-fit: contain;
+}
+
+.profile p{
+  width: 50%;
+  padding: 0 5% 0 0;
+  margin: 10% auto;
+  text-align: justify;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+/*** NEXT & PREVIOUSE BTN ***/
+
+.next-previous{
+  margin-left: var(--siderbar-width);
+  display: flex;
+  justify-content: space-between;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #066163;
+  color: white;
+}
+
+.previous, .next {
+  border-radius: 10px;
+  padding: 8px 16px;
+  display: inline-block;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.next:hover, .previous:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*** FOOTER ***/
+
+.footer{
+  margin-top: 10%;
+  margin-left: var(--siderbar-width);
+  background-color: #383838;
+}
+
+.info-footer{
+  margin-top: 10%;
+  background-color: #383838;
+}
+
+.footer p, .info-footer p{
+  color: white;
+}
+
+@media (max-width: 500px){
+  .footer p, .home-footer p {
+    font-size: 10px;
+  }
+}
+
+/*** PELAJARAN ***/
+.sidebar {
+  height: 100vh;
+  width: var(--siderbar-width);
+  float: left;
+  background-color: #f1f1f1;
+  padding-top: 20px;
+  position: fixed;
+  box-shadow: 0px 0px 10px 2px rgb(133, 133, 133);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar a, .sidebar h4 {
+  display: block;
+  color: black;
+  padding: 15px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #066163;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #0a818393;
+  color: white;
+}
+
+.content-container {
+  padding: 0 10%;
+}
+
+.content {
+  margin-left: var(--siderbar-width);
+  padding: 50px 100px;
+  font-size: 17px;
+  
+  text-align: justify;  
+}
+
+.content h1{
+  font-size: 60px;
+}
+
+.content h5{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.content ul, ol, li, p {
+  font-size: 20px;
+}
+
+.conteng img {
+  width: 1000px;
+}
+
+/*** MEDIA ***/
+@media (max-width: 1200px) {
+  .profile{
+    display: block;
+  }
+
+  .profile img{
+    text-align:center;
+    width:70%;
+    display:block;
+    margin:auto;
+    padding: 10%;
+  }
+
+  .profile p{
+    font-size: 1em;
+    padding: 1%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1000px) {
+
+}
